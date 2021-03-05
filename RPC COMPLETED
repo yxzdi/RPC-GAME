@@ -1,0 +1,39 @@
+import random,time
+
+cpu = ['rock', 'paper', 'scissor']
+
+print("Welcome to the game of rock, paper, scissor!")
+consumer = str.lower(input("Which one are you going to choose? "))
+
+time.sleep(0.5)
+print("Let's see who wins...")
+time.sleep(1.5)
+print("Rock!")
+time.sleep(1.5)
+print("Paper!")
+time.sleep(1.5)
+print("Scissor!")
+
+comp = random.choice(cpu)
+
+time.sleep(1)
+print('The computer chose ' + comp + '!')
+
+if (consumer == comp):
+    print("That's a tie!")
+    
+#You win!
+elif comp ==  cpu[0] and consumer == cpu[1]:
+    print("You win!")
+elif comp == cpu[1] and consumer == cpu[2]:
+    print("You win!")
+elif comp == cpu[2] and consumer == cpu[0]:
+    print("You win!")
+    
+#You lose:(
+elif comp == cpu[0] and consumer == cpu[2]:
+    print("You lose:(")
+elif comp == cpu[1] and consumer == cpu[0]:
+    print("You lose:(")
+elif comp == cpu[2] and consumer == cpu[1]:
+    print("You lose:(")
